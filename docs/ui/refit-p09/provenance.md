@@ -11,12 +11,12 @@
 | `01-source-desktop.png` | `b279fd56e7a99a942a9975177b3cd15aa26605ccd042cd12309e3a2e65810670` |
 | `02-query-source.png` | `8bad7939e023ccc1547a5029a88a35bc556677fb75b7309973dada444365e1df` |
 | `03-original-drawer.png` | `281916be2391e6dfa22d2ff7c056ced11a873df77e9f8becf1e1f0ce2f4d9a75` |
-| `04-preview50-source.png` | `2f484664d9bd899cbc8c51711185e3263ef1d1e6bf5db627e0e86bde037ab1fe` |
+| `04-preview50-source.png` | `010805887df18965196b9a6ce80942e15055b5ea4fe2f5e54181ef77138644f5` |
 | `05-mobile-query.png` | `47f0de94a6f61fc30b6d561d180faa2b130fadd1da772fad87edea4634ede85f` |
-| `06-mobile-receipts.png` | `337cfd09c89bdedc6cb12a1b8b021b50f487c1fb978e3426227c79c89777f885` |
-| `07-model-disabled-comparison.png` | `c43d5dc5a0b42175b6effb0ba0f2294f3f50229082ba8ef800351e8b503a6ac5` |
-| `policy-live-state-desktop.png` | `223197024cb8ec3667506efd844015c75271f5409314f18cefc926db39ea52d5` |
-| `policy-physical-identity-desktop.png` | `5e2117d6ef966fc6508906febc2b1f15d64c1faeb6009226c7c4a13fb200f407` |
-| `policy-physical-identity-mobile.png` | `6683bd90549dba4755005b35c87fe36810c5c736b36551fe86fbcf412dcba611` |
+| `06-mobile-receipts.png` | `b881e8b2f3112cc466f9324b81d5a1a231d1bdbfdb8c409053c2a5addaeaf71b` |
+| `07-model-disabled-comparison.png` | `02e8e27c512963384af72159f018d5a1d196223157a5ed39a8d9e37ae4b2ecbd` |
+| `policy-live-state-desktop.png` | `092adb932194e95e0de85133f5773e5227d2ef2aabbf685e5e4bdff3a8a1c095` |
+| `policy-physical-identity-desktop.png` | `d509355efb4597c81636c2151dae5e4369a0b14de0f4dc7fa61b4afbfdbc6215` |
+| `policy-physical-identity-mobile.png` | `693cee9bde6ae7fc5e8f7ef74536f403c3145f2ba8e30db7f02edc445eedb28c` |
 
-브라우저 보고서 SHA-256: `browser-check.json` `cf2b3f8896f031bfd3981ccbdcb97d43451559a482a762e70ce15db1037eede0`, `policy-check.json` `22616564e91db8c717f757e2e2312ce42348c1cd705c9d3a30c71541263fa41e`.
+브라우저 보고서 SHA-256: `browser-check.json` `cf2b3f8896f031bfd3981ccbdcb97d43451559a482a762e70ce15db1037eede0`, `policy-check.json` `511f0744f67169d2c322ef587b65ca7a2076be2f2d745e2d4bea8a844f744c12`.

@@ -182,6 +182,8 @@ def main():
         page.wait("document.getElementById('equipment-rows').children.length===50 && !document.getElementById('query-submit').disabled")
         check(js("document.querySelector('input[name=method][value=rag]').disabled && document.querySelector('input[name=method][value=all]').disabled"),"preview50 retrieval only")
         passed("50-row separate retrieval-only corpus")
+        js("document.querySelector('.table-scroll').scrollLeft=0")
+        check(js("document.querySelector('.table-scroll').scrollLeft===0"),"50-row capture starts with document names visible")
         page.shot(out/"04-preview50-source.png")
         js("document.querySelector('input[name=scope][value=external]').click()")
         page.wait("!document.getElementById('query-submit').disabled")

@@ -26,7 +26,7 @@
     {
       "case": "live-state",
       "method": "rag",
-      "receipt_id": "ae255e43ed635d5b1a1084c3",
+      "receipt_id": "84c36c3b14d7bbb026c09cc2",
       "generation_status": "policy_abstained",
       "rule_gate": {
         "code": "live_state_not_in_catalog",
@@ -40,7 +40,7 @@
     {
       "case": "live-state",
       "method": "all",
-      "receipt_id": "7dca96cc68b0e6d71c5c97fe",
+      "receipt_id": "967ac7280ce10b2730f164ac",
       "generation_status": "policy_abstained",
       "rule_gate": {
         "code": "live_state_not_in_catalog",
@@ -54,7 +54,7 @@
     {
       "case": "physical-identity",
       "method": "rag",
-      "receipt_id": "27054488a69a50551471f80b",
+      "receipt_id": "96d904c510760c8704fc2255",
       "generation_status": "policy_abstained",
       "rule_gate": {
         "code": "physical_identity_not_in_preview",
@@ -68,7 +68,7 @@
     {
       "case": "physical-identity",
       "method": "all",
-      "receipt_id": "5591d3ca1859e52f119d9044",
+      "receipt_id": "964109a46ccd91958476bdc3",
       "generation_status": "policy_abstained",
       "rule_gate": {
         "code": "physical_identity_not_in_preview",
