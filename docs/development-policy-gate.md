@@ -1,0 +1,9 @@
+# Public-catalog policy gate before evaluation
+
+The public catalog is a captured preview. It has no live booking, calibration or visitor-access state and no persistent physical asset identifiers. The gate is a deterministic safety rule, not a model answer or evidence that a company approved our interpretation.
+
+In the final v3 development run, D3 lexical RAG emitted SUPPORTED with an unrelated frequency quote for a question asking whether two same-model records are one physical asset. D4 lexical RAG emitted SUPPORTED with an unrelated technical specification for today's booking time. The D4 all-context run stopped at the 512-token output cap. Both D2 and D3 all-context responses copied quotes that were not exact raw substrings and were rejected. Those original traces and failures remain in ignored local artifacts.
+
+Policy gate p06_public_catalog_gate_v1 now detects a request for current booking/calibration/visitor-access state, or proof that records are the same physical instrument. It keeps the visible retrieved records and source hashes, returns NOT_ESTABLISHED plus an owner question and records model_called=false. It never treats a sharing label as permission. This applies identically to final RAG and all-context arms and is recorded separately from model success. Source-only lookup still shows original catalog fields without a generated answer. CPU tests assert that a model stub cannot run for gated questions. These cases should be counted as rule abstentions with zero model calls, not Qwen successes or failures.
+
+The gate is intentionally narrow. Other model answers still require raw quote, source selection, schema and answer-state checks; those mechanical checks do not prove that a quote supports a claim. The independent quality rubric must detect unrelated citations and false access/capability assertions. No evaluation case content was consulted to write this gate.

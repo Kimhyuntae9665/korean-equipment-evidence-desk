@@ -1,0 +1,31 @@
+{
+  "publisher": "한국전기연구원 (Korea Electrotechnology Research Institute)",
+  "official_source_url": "https://www.data.go.kr/data/15018891/fileData.do",
+  "catalog_name": "한국전기연구원_장비보유현황_20260417",
+  "catalog_date": "2026-04-17",
+  "retrieval_time_utc": "2026-09-30T12:18:08Z",
+  "publisher_rights_notice_verbatim": "이용허락범위 제한 없음",
+  "notice_translation": "No restriction on scope of permitted reuse, as displayed by the public-data portal",
+  "attribution": "Source: Korea Electrotechnology Research Institute, equipment inventory dated 2026-04-17, via DATA.GO.KR. Accessed 2026-09-30.",
+  "rights_scope_note": "Retain the publisher attribution and source notice. This notice is not a license grant for unrelated manufacturer manuals, images, software or trademarks.",
+  "capture_method": "Already-public rendered HTML preview cells; not original CSV bytes",
+  "scope": {
+    "publisher_advertised_full_rows": 641,
+    "captured_preview_rows": 50,
+    "small_comparison_rows": 8
+  },
+  "excluded_fields": [
+    "country",
+    "classification code",
+    "installation address/location",
+    "personal contacts"
+  ],
+  "privacy_check": "Projected fields had no email/phone-pattern or personal-contact-keyword matches; this is not a formal DLP audit.",
+  "limitations": [
+    "Annual snapshot, not live equipment availability",
+    "Sharing fields may contain publisher default values",
+    "Local document IDs identify frozen source rows, not stable physical assets",
+    "No booking, access permission, calibration validity or safety suitability is established",
+    "Source consistency is not independent verification of physical capability"
+  ]
+}

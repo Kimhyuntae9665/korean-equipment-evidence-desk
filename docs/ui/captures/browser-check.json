@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "name": "initial admitted 8 rows, source date, named native dialog",
+      "status": "passed"
+    },
+    {
+      "name": "actual source receipt and independent unexecuted model arms",
+      "status": "passed"
+    },
+    {
+      "name": "raw drawer provenance and keyboard Escape focus return",
+      "status": "passed"
+    },
+    {
+      "name": "stored actual source receipt reload",
+      "status": "passed"
+    },
+    {
+      "name": "one real source POST despite duplicate submit (delayed transport mock)",
+      "status": "passed"
+    },
+    {
+      "name": "50-row separate retrieval-only corpus",
+      "status": "passed"
+    },
+    {
+      "name": "external scope raw-label filter",
+      "status": "passed"
+    },
+    {
+      "name": "missing stored receipt after restart, explicitly mocked GET failure",
+      "status": "passed"
+    },
+    {
+      "name": "explicit model mock: safe text, source notation state, named dialog, quote highlight and reduced-motion focus return",
+      "status": "passed"
+    },
+    {
+      "name": "explicit citation-hash fault mock: visible accessible error inside open modal",
+      "status": "passed"
+    },
+    {
+      "name": "explicit empty-source receipt mock, no fabricated equipment",
+      "status": "passed"
+    },
+    {
+      "name": "explicit unavailable-model mock, then actual source receipt restored",
+      "status": "passed"
+    },
+    {
+      "name": "computed rendered text contrast >=4.5; disabled controls excluded",
+      "status": "passed"
+    },
+    {
+      "name": "actual RAG and All-context unavailable receipts; model-disabled health guarded",
+      "status": "passed"
+    },
+    {
+      "name": "390px reflow and readable question controls",
+      "status": "passed"
+    },
+    {
+      "name": "mobile task tabs",
+      "status": "passed"
+    },
+    {
+      "name": "720px viewport reflow equivalent to 200-percent desktop zoom",
+      "status": "passed"
+    }
+  ],
+  "passed": 17,
+  "new_model_requests": 0,
+  "real_requests": "catalog GET, source query POST, stored source receipt GET; optional rag/all POST only with model_enabled=false",
+  "actual_model_disabled_receipts": 2,
+  "mocks": [
+    "350ms source transport delay",
+    "unknown_receipt 400 on GET",
+    "validated citation renderer only",
+    "citation hash mismatch",
+    "model unavailable renderer only",
+    "empty source receipt"
+  ],
+  "minimum_computed_text_contrast": {
+    "ratio": 5.069400418784484,
+    "tag": "SPAN",
+    "cls": "step"
+  },
+  "screenshots": [
+    "01-source-desktop.png",
+    "02-query-source.png",
+    "03-original-drawer.png",
+    "04-preview50-source.png",
+    "05-mobile-query.png",
+    "06-mobile-receipts.png",
+    "07-model-disabled-comparison.png"
+  ],
+  "limitations": [
+    "No actual model invocation or successful-model capture",
+    "720px reflow is a viewport equivalent, not native browser zoom",
+    "Automated checks do not replace complete accessibility review"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "name": "live-state rag actual policy receipt and UI",
+      "status": "passed"
+    },
+    {
+      "name": "live-state all actual policy receipt and UI",
+      "status": "passed"
+    },
+    {
+      "name": "physical-identity rag actual policy receipt and UI",
+      "status": "passed"
+    },
+    {
+      "name": "physical-identity all actual policy receipt and UI",
+      "status": "passed"
+    },
+    {
+      "name": "390px policy badge and reason reflow",
+      "status": "passed"
+    }
+  ],
+  "passed": 5,
+  "actual_receipts": [
+    {
+      "case": "live-state",
+      "method": "rag",
+      "receipt_id": "f650d0eb62f7d41b2fa5079b",
+      "generation_status": "policy_abstained",
+      "rule_gate": {
+        "code": "live_state_not_in_catalog",
+        "reason": "공개 목록에는 현재 예약·교정·방문 권한 상태가 없습니다.",
+        "owner_question": "운영 담당자에게 현재 상태와 접근 절차를 확인해 주세요.",
+        "model_called": false,
+        "revision": "p06_public_catalog_gate_v1"
+      },
+      "candidate_count": 3
+    },
+    {
+      "case": "live-state",
+      "method": "all",
+      "receipt_id": "c384562263603fab141f0ff5",
+      "generation_status": "policy_abstained",
+      "rule_gate": {
+        "code": "live_state_not_in_catalog",
+        "reason": "공개 목록에는 현재 예약·교정·방문 권한 상태가 없습니다.",
+        "owner_question": "운영 담당자에게 현재 상태와 접근 절차를 확인해 주세요.",
+        "model_called": false,
+        "revision": "p06_public_catalog_gate_v1"
+      },
+      "candidate_count": 8
+    },
+    {
+      "case": "physical-identity",
+      "method": "rag",
+      "receipt_id": "7e42a16864df712143c9c057",
+      "generation_status": "policy_abstained",
+      "rule_gate": {
+        "code": "physical_identity_not_in_preview",
+        "reason": "자료 기록 ID와 같은 모델명은 동일 물리 장비의 증거가 아닙니다.",
+        "owner_question": "소유자에게 별도 자산 식별자와 기록 관계를 확인해 주세요.",
+        "model_called": false,
+        "revision": "p06_public_catalog_gate_v1"
+      },
+      "candidate_count": 3
+    },
+    {
+      "case": "physical-identity",
+      "method": "all",
+      "receipt_id": "720448a92b97d4edd09f67fd",
+      "generation_status": "policy_abstained",
+      "rule_gate": {
+        "code": "physical_identity_not_in_preview",
+        "reason": "자료 기록 ID와 같은 모델명은 동일 물리 장비의 증거가 아닙니다.",
+        "owner_question": "소유자에게 별도 자산 식별자와 기록 관계를 확인해 주세요.",
+        "model_called": false,
+        "revision": "p06_public_catalog_gate_v1"
+      },
+      "candidate_count": 8
+    }
+  ],
+  "new_model_requests": 0,
+  "real_requests": "CPU-disabled health GET, rag/all policy query POST, stored receipt GET",
+  "mocks": [],
+  "screenshots": [
+    "policy-live-state-desktop.png",
+    "policy-physical-identity-desktop.png",
+    "policy-physical-identity-mobile.png"
+  ],
+  "limitations": [
+    "Public catalog policy abstention, no model inference or semantic evaluation"
+  ]
+}

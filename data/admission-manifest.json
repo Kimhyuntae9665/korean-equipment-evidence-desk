@@ -1,0 +1,62 @@
+{
+  "bundle_library_file_id": "libfile_31c6ab5b18e88191adbbacb0e3b009d6",
+  "bundle_version": 0,
+  "zip_sha256": "864c98c50655ca4c01540d2493ef77366362c0e3b96ba50b998ff5eb0c212020",
+  "delivery_manifest": {
+    "bundle_version": "1.0",
+    "prepared_at_utc": "2026-09-30T12:37:00Z",
+    "hash_algorithm": "SHA-256 over exact file bytes",
+    "files": [
+      {
+        "file": "README.txt",
+        "bytes": 3514,
+        "sha256": "950a678c92377c16acd93cc9237aa90128952646f1caa46a425f25737830cfc1"
+      },
+      {
+        "file": "catalog-preview-50.json",
+        "bytes": 68690,
+        "sha256": "a0fba1173ade77351242cf01aac1019c1fd60cc5e17f8b78a138ccf7bffdee4a"
+      },
+      {
+        "file": "catalog-small-8.json",
+        "bytes": 8291,
+        "sha256": "d0e5cad515090391f745a93551084cabfde89b4c97cee2aeea3de6bffdc01479"
+      },
+      {
+        "file": "questions-core-v1.json",
+        "bytes": 15707,
+        "sha256": "185b28959db3e67f107b884d79f5ebaa169388daa820c1608a337b2818b9c8e1"
+      },
+      {
+        "file": "questions-reserved-v1.json",
+        "bytes": 8661,
+        "sha256": "9d871c36626f4439851fa9e6db888411b7641ceb966b56878e5881c756b91fc2"
+      },
+      {
+        "file": "source-rights.json",
+        "bytes": 1706,
+        "sha256": "b79deedbf3cc64822f36204c3efe58ca10039d39e9552e33aece3327d2c9d6f8"
+      }
+    ]
+  },
+  "runtime_files": [
+    {
+      "file": "catalog-preview-50.json",
+      "sha256": "a0fba1173ade77351242cf01aac1019c1fd60cc5e17f8b78a138ccf7bffdee4a",
+      "bytes": 68690
+    },
+    {
+      "file": "catalog-small-8.json",
+      "sha256": "d0e5cad515090391f745a93551084cabfde89b4c97cee2aeea3de6bffdc01479",
+      "bytes": 8291
+    },
+    {
+      "file": "source-rights.json",
+      "sha256": "b79deedbf3cc64822f36204c3efe58ca10039d39e9552e33aece3327d2c9d6f8",
+      "bytes": 1706
+    }
+  ],
+  "gold_runtime_excluded": true,
+  "initial_text_budget_bytes": 10485760,
+  "scope": "DOM preview projection, not original CSV, full641 catalog or persistent physical IDs"
+}
