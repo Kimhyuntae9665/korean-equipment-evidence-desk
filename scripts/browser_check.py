@@ -144,6 +144,8 @@ def main():
             return
         check(js("document.documentElement.lang==='ko'"),"Korean document language")
         check(js("document.getElementById('catalog-date').textContent==='2026-04-17'"),"catalog date")
+        check(js("getComputedStyle(document.body).backgroundColor==='rgb(241, 244, 246)' && getComputedStyle(document.querySelector('.primary')).backgroundColor==='rgb(23, 63, 96)'"),"approved P09 v2 page and primary colors")
+        check(js("(()=>{const heading=document.querySelector('h1');const style=getComputedStyle(heading);return heading.textContent==='한국어 장비 근거 데스크' && style.whiteSpace==='nowrap' && document.querySelector('.desk').getBoundingClientRect().width<=1120})()"),"single-line Korean title and bounded desk")
         check(js("document.getElementById('evidence-dialog').getAttribute('aria-labelledby')==='evidence-title'"),"named dialog")
         check(js("!document.body.innerText.includes('예약 가능')"),"no booking claim")
         passed("initial admitted 8 rows, source date, named native dialog")
@@ -242,6 +244,7 @@ def main():
         page.call("Emulation.setDeviceMetricsOverride",{"width":390,"height":844,"deviceScaleFactor":1,"mobile":True})
         js("window.scrollTo(0,0)")
         check(js("document.documentElement.scrollWidth<=390"),"mobile page overflow")
+        check(js("(()=>{const title=document.querySelector('h1');return title.getBoundingClientRect().right<=390 && getComputedStyle(title).whiteSpace==='nowrap'})()"),"390px title remains one line without clipping")
         check(js("getComputedStyle(document.getElementById('question')).fontSize==='16px'"),"16px controls")
         passed("390px reflow and readable question controls")
         page.shot(out/"05-mobile-query.png")

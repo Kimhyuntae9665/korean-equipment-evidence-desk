@@ -124,7 +124,7 @@ python3 scripts/render_architecture.py
 |---|---|
 | CPU 통합·검색·근거·서버 회귀 | 84개 실행 중 75개 통과·9개 건너뜀: hash mutation, 원문 span, 모델명 중복, 범위, whole-record budget, 정책 보류 |
 | CPU tokenizer 회귀 | 작업 단계 23 tests 통과: metadata 경계, special IDs, 한글/emoji/CRLF roundtrip, 실패 닫힘 |
-| UI/HTTP 통합·접근성 | 실제 브라우저 기준선 17개·정책 보류 5개 검사군, 전송·보류 검사 5/5, Node 구문 검사 통과. CPU 원문 화면 7장; 390px 화면과 최소 텍스트 대비 5.0694:1 측정. 전체 접근성 감사·실제 확대는 미실시 |
+| UI/HTTP 통합·접근성 | P09 v2 화면 기준 재검증: 실제 Chrome 기본 흐름 17개·정책 보류 5개 검사 통과, 새 CPU 화면 10장, 390px 및 720px 재배치·키보드 원문 복귀 확인. 모델 요청 0회. 전체 접근성 감사·실제 확대는 미실시 |
 | Actual runner token parity | 개발 호출 14/14에서 CPU 계수와 prompt_eval_count 일치. 캐시 적중 의미 아님 |
 | 실험 A의 실제 모델 결과·실패·지연 | 개발 호출 14건만 완료: 정상 종료 13·출력길이 실패 1. v1/v2/진단/v3를 섞어 정확도 산출 금지; 정식 12개 평가 대기 |
 | 실험 B의 50행 검색 평가 | 실행·결과 대기 |
@@ -134,25 +134,49 @@ CPU 단위 테스트 분모는 모델 평가 정확도가 아닙니다. 현재 �
 
 ## 실제 화면 증거
 
-**CPU 기준선:** 아래 원문 목록은 모델 비활성 상태의 실제 브라우저 화면입니다. 모델 답변은 생성하지 않았습니다.
+현재 UI는 승인된 P09 v2 개발 화면의 밝은 회색 바탕, 남색 글자·버튼, 흰색 2열 패널과 원문 블록을 기준으로 맞췄습니다. 아래 **10장은 새 화면에서 실제 Chrome으로 캡처한 CPU 상태**입니다. 화면 순서대로 원문 선택 → 출처 → 방식 비교 → 보류 → 모바일을 보여 줍니다. 모델 요청은 0회이고, 정책 보류 화면은 실제 서버 규칙의 결과입니다. [캡처 출처·해시와 검사 범위](docs/ui/refit-p09/provenance.md)를 함께 보세요.
 
-![CPU 모델 미사용 기준선: 공개 원문 8행과 카탈로그 날짜](docs/ui/captures/01-source-desktop.png)
+**1. 원문 범위 선택:** 8행 스냅샷과 질문·공유범위 선택이 나란히 보입니다.
 
-**실제 모델 개발용 시연 한 건:** N9030A 질문을 RAG로 한 번 요청한 실제 응답입니다. 44GHz 제안의 인용 문자열과 원문 범위가 일치했으며, 의미·장비 적합성 검증은 수행하지 않았습니다.
+![8행 원문 목록과 질문·범위 선택](docs/ui/refit-p09/01-source-desktop.png)
 
-![실제 RAG 개발용 시연: 원문 인용 검사와 44GHz 제안](docs/ui/actual-model-d1/actual-model-outcome-desktop.png)
+**2. 질의 결과:** E8363B 질의의 실제 source 기록과 별도로 표시되는 미실행 모델 방식입니다.
 
-**실제 모델 390px 화면:** 같은 기록을 좁은 화면에서 확인했습니다. 추가 모델 요청은 없습니다.
+![source 기록과 별도 방식 상태](docs/ui/refit-p09/02-query-source.png)
 
-![같은 실제 RAG 기록의 390px 화면](docs/ui/actual-model-d1/actual-model-outcome-mobile.png)
+**3. 원문 확인:** 문서 ID, 원문 해시, 원래 필드 문자열을 native 대화상자에서 확인합니다.
 
-[실제 작업 영상 · 12.04초](docs/ui/actual-model-d1/video/workflow.mp4) · [실제 모델 시연 출처·기록·지연](docs/ui/actual-model-d1/provenance.md) · [UI 검증 범위](docs/ui/implementation.md)
+![원문 필드와 출처 해시 대화상자](docs/ui/refit-p09/03-original-drawer.png)
 
-전체 갤러리는 다음 링크에서 확인할 수 있습니다. 응답 모의검사 이미지는 갤러리에 넣지 않았습니다.
+**4. 다른 스냅샷:** 50행 실험 B는 검색 전용으로 유지됩니다.
 
-- CPU 원문: [데스크톱 목록](docs/ui/captures/01-source-desktop.png), [실제 source 기록](docs/ui/captures/02-query-source.png), [원문 서랍](docs/ui/captures/03-original-drawer.png), [50행 검색 범위](docs/ui/captures/04-preview50-source.png)
-- CPU 모델 미사용: [390px 질의](docs/ui/captures/05-mobile-query.png), [390px 기록](docs/ui/captures/06-mobile-receipts.png), [RAG·All-context 사용 불가 비교](docs/ui/captures/07-model-disabled-comparison.png)
-- 실제 모델 D1 개발용 시연: [질문 입력](docs/ui/actual-model-d1/actual-model-input-desktop.png), [데스크톱 응답](docs/ui/actual-model-d1/actual-model-outcome-desktop.png), [원문 인용](docs/ui/actual-model-d1/actual-model-quote-desktop.png), [390px 응답](docs/ui/actual-model-d1/actual-model-outcome-mobile.png), [390px 원문 인용](docs/ui/actual-model-d1/actual-model-quote-mobile.png)
+![50행 검색 전용 원문 범위](docs/ui/refit-p09/04-preview50-source.png)
+
+**5. 방식별 상태:** 모델이 꺼진 환경의 RAG·All-context는 원문 후보와 실패 상태를 분리합니다.
+
+![원문 조회와 모델 사용 불가 기록](docs/ui/refit-p09/07-model-disabled-comparison.png)
+
+**6. 현재 상태 확인 보류:** 공개 목록에 없는 예약·교정·방문 권한은 모델을 부르지 않고 확인 질문으로 남깁니다.
+
+![현재 상태 확인 요청의 실제 정책 보류](docs/ui/refit-p09/policy-live-state-desktop.png)
+
+**7. 물리 장비 동일성 보류:** 같은 모델명 행의 물리적 동일성을 입증하지 않습니다.
+
+![동일 모델의 물리 장비 식별 보류](docs/ui/refit-p09/policy-physical-identity-desktop.png)
+
+**8. 390px 입력:** 큰 한국어 제목과 기능 컨트롤이 한 화면 폭에 들어갑니다.
+
+<img src="docs/ui/refit-p09/05-mobile-query.png" alt="390px 질문 입력 화면" width="390">
+
+**9. 390px 기록:** 좁은 화면에서는 결과 탭으로 실제 제공 문서 ID와 방식별 상태를 읽습니다.
+
+<img src="docs/ui/refit-p09/06-mobile-receipts.png" alt="390px 방식별 기록 화면" width="390">
+
+**10. 390px 보류:** 물리 장비 동일성의 미확정 상태를 별도로 표시합니다.
+
+<img src="docs/ui/refit-p09/policy-physical-identity-mobile.png" alt="390px 물리 장비 동일성 보류 화면" width="390">
+
+이전 스타일의 [CPU 갤러리](docs/ui/captures/01-source-desktop.png)와 [실제 Qwen 개발 시연 화면·12.04초 영상](docs/ui/actual-model-d1/provenance.md)은 **과거 UI 증거**입니다. D1에서 RAG가 44GHz 원문 문자열을 인용한 사실은 그대로지만, 새 UI에서 모델을 재실행하거나 해당 출력을 재캡처하지 않았습니다. 출처 문자열의 일치가 의미·장비 적합성을 검증한 것은 아닙니다. 이전 [UI 구현 메모](docs/ui/implementation.md)는 원래 검증 범위를 보존합니다.
 
 ## 라이선스와 의존 자료
 
