@@ -187,3 +187,7 @@ CPU 단위 테스트 분모는 모델 평가 정확도가 아닙니다. 현재 �
 자료는 연간 카탈로그의 제한된 DOM 스냅샷입니다. 현재 장비 상태, 외부 사용자 승인, 교정 유효성, 측정 적합성, 위험 조작 절차를 답으로 보장하지 않습니다. 동일 모델명이나 snapshot row ID만으로 실제 장비 동일성을 확정하지 않습니다. 인용 문자열이 맞아도 수치 의미가 잘못 연결될 수 있습니다.
 
 후속 범위는 사전 고정한 실험의 실제 측정, 별도 신규 질의 평가, 출처와 권리를 확인한 원본 import, 명시적인 이용·교정 확인 절차입니다. 현재 프로젝트 성과로 기업 보고서의 효과나 실제 공장 공수 절감을 가져오지 않습니다.
+
+## Windows CPU startup
+
+`.gitattributes` keeps hashed source files in LF form even when Git uses `core.autocrlf=true`; do not rewrite fixture bytes or regenerate source manifests to bypass an integrity failure. From a fresh clone, run `python -X utf8=0 scripts/check_startup.py` for a model-free startup/integrity check. The same check runs on Windows CI. Optional local-model lease and model-runner tests still require Linux/POSIX; this CPU startup check does not claim Windows inference support.
